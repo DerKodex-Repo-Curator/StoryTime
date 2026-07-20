@@ -83,7 +83,12 @@ function refreshDefaultButtons() {
             btn.textContent = `default: ${def} ${getSpeedUnit()}`;
         } else {
             def = btn.dataset.default;
-            btn.textContent = `default: ${def}`;
+            if (input.tagName === 'SELECT') {
+                const opt = input.querySelector(`option[value="${def}"]`);
+                btn.textContent = `default: ${opt ? opt.textContent : def}`;
+            } else {
+                btn.textContent = `default: ${def}`;
+            }
         }
         const cur = input.value;
         let match = false;
@@ -436,6 +441,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (input.dataset) input.dataset.cpm = btn.dataset.defaultCpm;
         } else {
             input.value = btn.dataset.default;
+        }
+        if (input.tagName === 'SELECT') {
+            input.dispatchEvent(new Event('change', { bubbles: true }));
         }
         refreshDefaultButtons();
     });

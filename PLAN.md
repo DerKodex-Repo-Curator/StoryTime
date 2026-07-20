@@ -11,9 +11,9 @@ Tasks that don't belong to a milestone yet. Assign to a milestone when ready to 
 
 
 ## Bugs
-- [ ] scoring mode default button shows "(splits)" when it should show "adaptive"
-- [ ] scoring mode adaptive shouldn't also have "(splits)" in the name
-- [ ] scoring mode clicking on default button to set to adaptive doesn't change the settings from fixed thresholds to the adaptive std-dev settings like when we manually click the dropdown.
+- [x] scoring mode default button shows "(splits)" when it should show "adaptive"
+- [x] scoring mode adaptive shouldn't also have "(splits)" in the name
+- [x] scoring mode clicking on default button to set to adaptive doesn't change the settings from fixed thresholds to the adaptive std-dev settings like when we manually click the dropdown.
 
 
 ## Milestone 5: Juice & User Profiles
